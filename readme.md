@@ -27,8 +27,8 @@ yay -S rose-pine-cursor
 Other Distributions:
 
 1. Download:
-    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/download/v2.0.0/BreezeX-RosePine-Linux.tar.xz)
-    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/download/v2.0.0/BreezeX-RosePineDawn-Linux.tar.xz)
+    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePine-Linux.tar.xz)
+    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePineDawn-Linux.tar.xz)
 2. Extract:
     - Rosé Pine: `tar -xvf ~/Downloads/BreezeX-RosePine-Linux.tar.xz -C ~/.local/share/icons`
     - Rosé Pine Dawn: `tar -xvf ~/Downloads/BreezeX-RosePineDawn-Linux.tar.xz -C ~/.local/share/icons`
@@ -39,8 +39,8 @@ Other Distributions:
 ### 🪟 Windows
 
 1. Download:
-    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/download/v2.0.0/BreezeX-RosePine-Windows.zip)
-    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/download/v2.0.0/BreezeX-RosePineDawn-Windows.zip)
+    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePine-Windows.zip)
+    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePineDawn-Windows.zip)
 2. Install:
     - Follow the instructions [here](https://www.digitalcitizen.life/install-mouse-cursor-scheme-window/)
 
@@ -48,8 +48,8 @@ Other Distributions:
 
 1. Download:
     - [Mousecape](https://github.com/alexzielenski/Mousecape/releases/latest)
-    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/download/v2.0.0/BreezeX-RosePine-macOS.cape)
-    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/download/v2.0.0/BreezeX-RosePineDawn-macOS.cape)
+    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePine-macOS.cape)
+    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePineDawn-macOS.cape)
 2. Install:
     - Simply double click the cape file with Mousecape on your system and it will be imported into your library.
 
