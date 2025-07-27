@@ -11,7 +11,7 @@
     </a>
 </p>
 
-Based on <https://github.com/ful1e5/BreezeX_Cursor>
+Based on [BreezeX_Cursor](https://github.com/ful1e5/BreezeX_Cursor)
 
 ## Usage
 
@@ -24,22 +24,34 @@ Arch:
 yay -S rose-pine-cursor
 ```
 
-Others:
+Other Distributions:
 
 1. Download:
-   - Rosé Pine: <https://github.com/rose-pine/cursor/releases/download/v1.1.0/BreezeX-RosePine-Linux.tar.xz>
-   - Rosé Pine Dawn: <https://github.com/rose-pine/cursor/releases/download/v1.1.0/BreezeX-RosePineDawn-Linux.tar.xz>
+    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePine-Linux.tar.xz)
+    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePineDawn-Linux.tar.xz)
 2. Extract:
-   - Rosé Pine: `tar -xvf ~/Downloads/BreezeX-RosePine-Linux.tar.xz -C ~/.local/share/icons`
-   - Rosé Pine Dawn: `tar -xvf ~/Downloads/BreezeX-RosePineDawn-Linux.tar.xz -C ~/.local/share/icons`
-3. Choose the cursor theme with GNOME TWeaks, nwg-look, lxappearance, etc. Or, install manually: <https://wiki.archlinux.org/title/Cursor_themes#Configuration>
+    - Rosé Pine: `tar -xvf ~/Downloads/BreezeX-RosePine-Linux.tar.xz -C ~/.local/share/icons`
+    - Rosé Pine Dawn: `tar -xvf ~/Downloads/BreezeX-RosePineDawn-Linux.tar.xz -C ~/.local/share/icons`
+3. Install:
+    - Use GNOME Tweaks, nwg-look, lxappearance, etc., to select the cursor theme.
+    - Alternatively, follow the manual installation guide [here](https://wiki.archlinux.org/title/Cursor_themes#Configuration)
 
 ### 🪟 Windows
 
 1. Download:
-   - Rosé Pine: <https://github.com/rose-pine/cursor/releases/download/v1.1.0/BreezeX-RosePine-Windows.zip>
-   - Rosé Pine Dawn: <https://github.com/rose-pine/cursor/releases/download/v1.1.0/BreezeX-RosePineDawn-Windows.zip>
-2. Follow the instructions here: <https://www.digitalcitizen.life/install-mouse-cursor-scheme-window/>
+    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePine-Windows.zip)
+    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePineDawn-Windows.zip)
+2. Install:
+    - Follow the instructions [here](https://www.digitalcitizen.life/install-mouse-cursor-scheme-window/)
+
+### 🍎 macOS
+
+1. Download:
+    - [Mousecape](https://github.com/alexzielenski/Mousecape/releases/latest)
+    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePine-macOS.cape)
+    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePineDawn-macOS.cape)
+2. Install:
+    - Simply double click the cape file with Mousecape on your system and it will be imported into your library.
 
 ## Gallery
 
@@ -50,6 +62,7 @@ Others:
 ## Thanks to
 
 - [ThatOneCalculator](https://github.com/thatonecalculator)
+- [waruhachi](https://github.com/waruhachi)
 
 ## Contributing
 
@@ -62,9 +75,12 @@ Requirements:
 
 ```sh
 git clone https://github.com/rose-pine/cursor/
+
 cd cursor
+
 bunx cbmp -d 'svg' -n 'BreezeX-RoséPine' -bc '#191724' -oc '#e0def4'
 bunx cbmp -d 'svg' -n 'BreezeX-RoséPineDawn' -bc '#faf4ed' -oc '#575279'
+
 ctgen build.toml -d 'bitmaps/BreezeX-RoséPine' -n 'BreezeX-RoséPine' -c 'Rosé Pine BreezeX cursors.'
 ctgen build.toml -d 'bitmaps/BreezeX-RoséPineDawn' -n 'BreezeX-RoséPineDawn' -c 'Rosé Pine Dawn BreezeX cursors.'
 ```
