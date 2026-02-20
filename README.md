@@ -71,7 +71,7 @@ To build from source:
 Requirements:
 
 - Bun: <https://bun.sh>
-- Clickgen: `pip install clickgen`
+- Clickgen: `pip install -r requirements.txt`
 
 ```sh
 git clone https://github.com/rose-pine/cursor/
