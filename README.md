@@ -79,19 +79,19 @@ git clone https://github.com/rose-pine/cursor/
 cd cursor
 
 # Render SVGs to bitmaps
-bunx cbmp -d 'svg' -n 'BreezeX-RoséPine' -bc '#191724' -oc '#e0def4'
-bunx cbmp -d 'svg' -n 'BreezeX-RoséPineDawn' -bc '#faf4ed' -oc '#575279'
+bunx cbmp -d 'svg' -n 'BreezeX-RosePine' -bc '#191724' -oc '#e0def4'
+bunx cbmp -d 'svg' -n 'BreezeX-RosePineDawn' -bc '#faf4ed' -oc '#575279'
 
 # Build cursor themes
-ctgen build.toml -d 'bitmaps/BreezeX-RoséPine' -n 'BreezeX-RoséPine' -c 'Rosé Pine BreezeX cursors.'
-ctgen build.toml -d 'bitmaps/BreezeX-RoséPineDawn' -n 'BreezeX-RoséPineDawn' -c 'Rosé Pine Dawn BreezeX cursors.'
+ctgen build.toml -d 'bitmaps/BreezeX-RosePine' -n 'BreezeX-RosePine' -c 'Rose Pine BreezeX cursors.'
+ctgen build.toml -d 'bitmaps/BreezeX-RosePineDawn' -n 'BreezeX-RosePineDawn' -c 'Rose Pine Dawn BreezeX cursors.'
 
 # Package
 mkdir -p bin && cd themes
-tar -cJf "../bin/BreezeX-RosePine-Linux.tar.xz" "BreezeX-RoséPine"
-tar -cJf "../bin/BreezeX-RosePineDawn-Linux.tar.xz" "BreezeX-RoséPineDawn"
-zip -r "../bin/BreezeX-RosePine-Windows.zip" "BreezeX-RoséPine-Windows"
-zip -r "../bin/BreezeX-RosePineDawn-Windows.zip" "BreezeX-RoséPineDawn-Windows"
+tar -cJf "../bin/BreezeX-RosePine-Linux.tar.xz" "BreezeX-RosePine"
+tar -cJf "../bin/BreezeX-RosePineDawn-Linux.tar.xz" "BreezeX-RosePineDawn"
+zip -r "../bin/BreezeX-RosePine-Windows.zip" "BreezeX-RosePine-Windows"
+zip -r "../bin/BreezeX-RosePineDawn-Windows.zip" "BreezeX-RosePineDawn-Windows"
 ```
 
 Releases are built automatically via GitHub Actions on every push to `main` and on tag pushes. To publish a release, push a tag in the format `v*` (e.g. `v1.0.0`) and the workflow will create a GitHub release with all four archives attached.
