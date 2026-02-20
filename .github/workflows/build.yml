@@ -1,0 +1,79 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+    paths-ignore:
+      - "**.md"
+      - LICENSE
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - LICENSE
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install Node dependencies
+        run: bun install
+
+      - name: Render bitmaps
+        run: |
+          bunx cbmp -d 'svg' -n 'BreezeX-RoséPine' -bc '#191724' -oc '#e0def4'
+          bunx cbmp -d 'svg' -n 'BreezeX-RoséPineDawn' -bc '#faf4ed' -oc '#575279'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build cursors
+        run: |
+          ctgen build.toml -d 'bitmaps/BreezeX-RoséPine' -n 'BreezeX-RoséPine' -c 'Rosé Pine BreezeX cursors.'
+          ctgen build.toml -d 'bitmaps/BreezeX-RoséPineDawn' -n 'BreezeX-RoséPineDawn' -c 'Rosé Pine Dawn BreezeX cursors.'
+
+      - name: Package
+        run: |
+          mkdir -p bin
+          cd themes
+          tar -cJf "../bin/BreezeX-RosePine-Linux.tar.xz" "BreezeX-RoséPine"
+          tar -cJf "../bin/BreezeX-RosePineDawn-Linux.tar.xz" "BreezeX-RoséPineDawn"
+          zip -r "../bin/BreezeX-RosePine-Windows.zip" "BreezeX-RoséPine-Windows"
+          zip -r "../bin/BreezeX-RosePineDawn-Windows.zip" "BreezeX-RoséPineDawn-Windows"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cursor-themes
+          path: bin/
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: cursor-themes
+          path: bin/
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: bin/*
