@@ -94,6 +94,7 @@ snap install rose-pine-cursor_1.1.0_amd64.snap --dangerous # The --dangerous fla
 
 # Iterates through all installed snap apps on the system, and "plugs in" the rose-pine-cursor snap so that 
 # they can actually read the theme files.
+# Note that you may need to restart these apps or even log out/log back in for the apps to actually pick up the cursor theme.
 for plug in $(snap connections | grep gtk-common-themes:icon-themes | awk '{print $2}'); do sudo snap connect ${plug} rose-pine-cursor:icon-themes; done
 
 # Alternatively, if you'd prefer to test this one app at a time you can run something like this:
