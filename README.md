@@ -27,8 +27,8 @@ yay -S rose-pine-cursor
 Other Distributions:
 
 1. Download:
-    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePine-Linux.tar.xz)
-    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePineDawn-Linux.tar.xz)
+    - [Rosé Pine](https://github.com/rose-pine/cursors/releases/latest/download/BreezeX-RosePine-Linux.tar.xz)
+    - [Rosé Pine Dawn](https://github.com/rose-pine/cursors/releases/latest/download/BreezeX-RosePineDawn-Linux.tar.xz)
 2. Extract:
     - Rosé Pine: `tar -xvf ~/Downloads/BreezeX-RosePine-Linux.tar.xz -C ~/.local/share/icons`
     - Rosé Pine Dawn: `tar -xvf ~/Downloads/BreezeX-RosePineDawn-Linux.tar.xz -C ~/.local/share/icons`
@@ -39,8 +39,8 @@ Other Distributions:
 ### 🪟 Windows
 
 1. Download:
-    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePine-Windows.zip)
-    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePineDawn-Windows.zip)
+    - [Rosé Pine](https://github.com/rose-pine/cursors/releases/latest/download/BreezeX-RosePine-Windows.zip)
+    - [Rosé Pine Dawn](https://github.com/rose-pine/cursors/releases/latest/download/BreezeX-RosePineDawn-Windows.zip)
 2. Install:
     - Follow the instructions [here](https://www.digitalcitizen.life/install-mouse-cursor-scheme-window/)
 
@@ -48,16 +48,20 @@ Other Distributions:
 
 1. Download:
     - [Mousecape](https://github.com/alexzielenski/Mousecape/releases/latest)
-    - [Rosé Pine](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePine-macOS.cape)
-    - [Rosé Pine Dawn](https://github.com/rose-pine/cursor/releases/latest/download/BreezeX-RosePineDawn-macOS.cape)
+    - [Rosé Pine](https://github.com/rose-pine/cursors/releases/latest/download/BreezeX-RosePine-macOS.cape)
+    - [Rosé Pine Dawn](https://github.com/rose-pine/cursors/releases/latest/download/BreezeX-RosePineDawn-macOS.cape)
 2. Install:
     - Simply double click the cape file with Mousecape on your system and it will be imported into your library.
 
 ## Gallery
 
-![Cursor showcase](https://github.com/rose-pine/cursor/assets/44733677/0c4f6823-48d5-4ec1-8e1c-201b22463ea1)
+**Rosé Pine**
 
-![Dawn cursor showcase](https://github.com/rose-pine/cursor/assets/44733677/18272dae-5ad7-4ed0-9916-9ad2715347bf)
+![Cursors showcase](https://github.com/rose-pine/cursors/assets/44733677/0c4f6823-48d5-4ec1-8e1c-201b22463ea1)
+
+**Rosé Pine Dawn**
+
+![Dawn cursors showcase](https://github.com/rose-pine/cursors/assets/44733677/18272dae-5ad7-4ed0-9916-9ad2715347bf)
 
 ## Thanks to
 
@@ -74,9 +78,9 @@ Requirements:
 - Clickgen: `pip install clickgen`
 
 ```sh
-git clone https://github.com/rose-pine/cursor/
+git clone https://github.com/rose-pine/cursors/
 
-cd cursor
+cd cursors
 
 bunx cbmp -d 'svg' -n 'BreezeX-RoséPine' -bc '#191724' -oc '#e0def4'
 bunx cbmp -d 'svg' -n 'BreezeX-RoséPineDawn' -bc '#faf4ed' -oc '#575279'
