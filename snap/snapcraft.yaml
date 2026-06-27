@@ -1,0 +1,36 @@
+name: rose-pine-cursor
+base: core24
+version: '1.1.0'
+title: Rosé Pine Cursor
+summary: Soho vibes for Cursors
+description: |
+  All natural pine, faux fur and a bit of soho vibes for the classy minimalist
+license: GPL-3.0
+website: https://rosepinetheme.com/
+source-code: https://github.com/rose-pine/cursor
+issues: https://github.com/rose-pine/cursor/issues
+
+slots:
+  icon-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/icons/BreezeX-RosePine-Linux
+        - $SNAP/share/icons/BreezeX-RosePineDawn-Linux
+
+grade: stable
+confinement: strict
+
+parts:
+  rose-pine-cursor:
+    plugin: dump
+    build-packages:
+      - pipx
+    source: .
+    override-build: |
+      pipx install clickgen
+      ~/.local/bin/ctgen build.toml -d 'bitmaps/BreezeX-RoséPine' -n 'BreezeX-RoséPine' -c 'Rosé Pine BreezeX cursors.'
+      ~/.local/bin/ctgen build.toml -d 'bitmaps/BreezeX-RoséPineDawn' -n 'BreezeX-RoséPineDawn' -c 'Rosé Pine Dawn BreezeX cursors.'
+      mkdir -p $SNAPCRAFT_PART_INSTALL/share/icons
+      mv themes/BreezeX-RoséPine $SNAPCRAFT_PART_INSTALL/share/icons/BreezeX-RosePine-Linux
+      mv themes/BreezeX-RoséPineDawn $SNAPCRAFT_PART_INSTALL/share/icons/BreezeX-RosePineDawn-Linux

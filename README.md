@@ -88,3 +88,19 @@ bunx cbmp -d 'svg' -n 'BreezeX-RoséPineDawn' -bc '#faf4ed' -oc '#575279'
 ctgen build.toml -d 'bitmaps/BreezeX-RoséPine' -n 'BreezeX-RoséPine' -c 'Rosé Pine BreezeX cursors.'
 ctgen build.toml -d 'bitmaps/BreezeX-RoséPineDawn' -n 'BreezeX-RoséPineDawn' -c 'Rosé Pine Dawn BreezeX cursors.'
 ```
+
+To build and test the snap package locally ensure you have Snapcraft set up by following the instructions [here](https://documentation.ubuntu.com/snapcraft/stable/how-to/set-up-snapcraft/).
+
+Then run the following:
+```sh
+snapcraft
+snap install rose-pine-cursor_1.1.0_amd64.snap --dangerous # The --dangerous flag is required for all snaps that aren't uploaded to the Snap Store
+
+# Iterates through all installed snap apps on the system, and "plugs in" the rose-pine-cursor snap so that 
+# they can actually read the theme files.
+# Note that you may need to restart these apps or even log out/log back in for the apps to actually pick up the cursor theme.
+for plug in $(snap connections | grep gtk-common-themes:icon-themes | awk '{print $2}'); do sudo snap connect ${plug} rose-pine-cursor:icon-themes; done
+
+# Alternatively, if you'd prefer to test this one app at a time you can run something like this:
+sudo snap connect firefox:icon-themes rose-pine-cursor:icon-themes
+```
